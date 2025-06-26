@@ -5,10 +5,15 @@ import java.time.LocalDate;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name = "clients")
-public class Client {
+//This class is an entity that allow us to create a table in the database
 
+@Entity
+
+//The annotations @Table(name = "clients") is used in Java with JPA (Java Persistence API)to map a Java class to a specific table in your database.
+//It tells JPA "This Java class should be stored in and read from a database table named call clients"
+@Table(name = "clients") 
+
+public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -22,7 +27,6 @@ public class Client {
     private String phone;
     private String address;
     private String status; // New, Permanent, Lead, Occasional, Inactive
-
     private Date createdAt;
 
     // Automatically set createAt before saving

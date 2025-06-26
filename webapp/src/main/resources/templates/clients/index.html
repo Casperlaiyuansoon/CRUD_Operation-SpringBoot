@@ -28,6 +28,7 @@
         <tbody class="table-group-divider">
           <tr th:each="client : ${clients}">
             <td th:text="${client.id}"></td>
+			<td th:text="${client.id}"></td>
             <td th:text="|${client.firstName} ${client.lastName}|"></td>
             <td th:text="${client.email}"></td>
             <td th:text="${client.phone}"></td>
